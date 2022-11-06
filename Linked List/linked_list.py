@@ -43,5 +43,6 @@ if __name__ == '__main__':
     linked_list.append(45)
     linked_list.append(98)
     linked_list.append(3)
-    print(linked_list.count())
+    linked_list.append(67)
+    print('Linked List Count is {0}'.format(linked_list.count()))
     linked_list.print_data()

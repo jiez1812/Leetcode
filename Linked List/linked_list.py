@@ -27,16 +27,21 @@ class SingleLinkedList:
                 print(pointer.val)
                 pointer = pointer.next
 
-    def main(self):
-        self.head = ListNode(45)
-        self.current = ListNode(98)
-        self.head.next = self.current
-
-        self.current = ListNode(3)
-        self.head.next.next = self.current
+    def append(self, data):
+        node = ListNode(data)
+        if self.head == None:
+            self.head = node
+        else:
+            pointer = self.head
+            while pointer.next:
+                pointer = pointer.next
+            
+            pointer.next = node
 
 if __name__ == '__main__':
     linked_list = SingleLinkedList()
-    linked_list.main()
-    # print(linked_list.count())
+    linked_list.append(45)
+    linked_list.append(98)
+    linked_list.append(3)
+    print(linked_list.count())
     linked_list.print_data()

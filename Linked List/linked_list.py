@@ -37,6 +37,12 @@ class SingleLinkedList:
                 pointer = pointer.next
             
             pointer.next = node
+    def push(self, data):
+        node = ListNode(data)
+        if self.head:
+            node.next = self.head
+        
+        self.head = node
 
 if __name__ == '__main__':
     linked_list = SingleLinkedList()
@@ -44,5 +50,5 @@ if __name__ == '__main__':
     linked_list.append(98)
     linked_list.append(3)
     linked_list.append(67)
-    print('Linked List Count is {0}'.format(linked_list.count()))
+    linked_list.push(53) 
     linked_list.print_data()

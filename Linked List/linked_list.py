@@ -66,6 +66,16 @@ class SingleLinkedList:
         else:
             print('Linked List is empty.')
 
+    def remove_last(self):
+        if self.head:
+            pointer = self.head
+            while pointer.next.next:
+                pointer = pointer.next
+            pointer.next = None
+        
+        else:
+            print("Linked List is empty.")
+
 if __name__ == '__main__':
     print('Create Single Link')
     linked_list = SingleLinkedList()
@@ -87,4 +97,8 @@ if __name__ == '__main__':
 
     print('\nPop the first node')
     linked_list.pop()
+    linked_list.print_data()
+
+    print('\nRemove the last node')
+    linked_list.remove_last()
     linked_list.print_data()

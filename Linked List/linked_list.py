@@ -67,18 +67,24 @@ class SingleLinkedList:
             print('Linked List is empty.')
 
 if __name__ == '__main__':
+    print('Create Single Link')
     linked_list = SingleLinkedList()
+
+    print('\nAppend digits : 45, 98, 3, 67')
     linked_list.append(45)
     linked_list.append(98)
     linked_list.append(3)
     linked_list.append(67)
     linked_list.print_data()
     
+    print('\nPush 53 at the head')
     linked_list.push(53) 
     linked_list.print_data()
 
+    print('\nInsert 76 at position 3')
     linked_list.insert(76, 3)
     linked_list.print_data()
 
+    print('\nPop the first node')
     linked_list.pop()
     linked_list.print_data()

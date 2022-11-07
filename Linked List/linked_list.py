@@ -75,6 +75,9 @@ class SingleLinkedList:
         
         else:
             print("Linked List is empty.")
+    
+    def reset(self):
+        self.__init__()
 
 if __name__ == '__main__':
     print('Create Single Link')
@@ -101,4 +104,8 @@ if __name__ == '__main__':
 
     print('\nRemove the last node')
     linked_list.remove_last()
+    linked_list.print_data()
+
+    print('\nReset Linked List')
+    linked_list.reset()
     linked_list.print_data()

@@ -57,6 +57,15 @@ class SingleLinkedList:
         
         self.head = node
 
+    def pop(self):
+        if self.head:
+            if self.head.next:
+                self.head = self.head.next
+            else:
+                self.head = None
+        else:
+            print('Linked List is empty.')
+
 if __name__ == '__main__':
     linked_list = SingleLinkedList()
     linked_list.append(45)
@@ -69,4 +78,7 @@ if __name__ == '__main__':
     linked_list.print_data()
 
     linked_list.insert(76, 3)
+    linked_list.print_data()
+
+    linked_list.pop()
     linked_list.print_data()

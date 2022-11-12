@@ -4,8 +4,8 @@ class Node:
         self.next = next
 
 class SingleLinkedList:
-    def __init__(self):
-        self.head = None
+    def __init__(self, head=None):
+        self.head = head
 
     def count(self):
         count = 0
@@ -75,6 +75,20 @@ class SingleLinkedList:
         
         else:
             print("Linked List is empty.")
+
+    def find_value(self, value):
+        index = 1
+        if self.head:
+            pointer = self.head
+            while pointer:
+                if pointer.val == value:
+                    return index
+                else:
+                    pointer = pointer.next
+                    index += 1
+            return 0
+        else:
+            return -1
     
     def reset(self):
         self.__init__()
@@ -105,6 +119,24 @@ if __name__ == '__main__':
     print('\nRemove the last node')
     linked_list.remove_last()
     linked_list.print_data()
+
+    print('\nFind value 76')
+    find_result = linked_list.find_value(76)
+    if find_result > 1:
+        print('The index is {0}'.format(find_result))
+    elif find_result == 0:
+        print('Value not found')
+    else:
+        print('This linked list is empty')
+
+    print('\nFind value 55')
+    find_result = linked_list.find_value(55)
+    if find_result > 1:
+        print('The index is {0}'.format(find_result))
+    elif find_result == 0:
+        print('Value not found')
+    else:
+        print('This linked list is empty')
 
     print('\nReset Linked List')
     linked_list.reset()

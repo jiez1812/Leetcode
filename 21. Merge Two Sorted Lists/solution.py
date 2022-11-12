@@ -4,17 +4,7 @@ class ListNode:
         self.val = val
         self.next = next
         
-class Solution:        
-    def append(self, val):
-        node = ListNode(val)
-        if self.head:
-            pointer = self.head
-            while pointer.next:
-                pointer = pointer.next
-            pointer.next = node
-        else:
-            self.head = node
-    
+class Solution:           
     def mergeTwoLists(self, list1, list2):
         self.head = None
         while list1 and list2:
@@ -46,6 +36,6 @@ class Solution:
             print('--- Print Nodes End  ---')
 
 if __name__ == '__main__':
-    s = Solution()
-    s.mergeTwoLists([1,2,4],[1,3,4])
-    s.print_data()
+    arr1 = [1,2,4]
+    arr2 = [1,3,4]
+    list1 = ListNode()

@@ -1,4 +1,4 @@
-class ListNode:
+class Node:
     def __init__(self, val, next=None):
         self.val = val
         self.next = next
@@ -30,7 +30,7 @@ class SingleLinkedList:
             print('--- Print Nodes End  ---')
     
     def insert(self, data, position):
-        node = ListNode(data)
+        node = Node(data)
         pointer = self.head
         position -= 1;
         while position != 1:
@@ -40,7 +40,7 @@ class SingleLinkedList:
         pointer.next = node
 
     def append(self, data):
-        node = ListNode(data)
+        node = Node(data)
         if self.head == None:
             self.head = node
         else:
@@ -51,7 +51,7 @@ class SingleLinkedList:
             pointer.next = node
     
     def push(self, data):
-        node = ListNode(data)
+        node = Node(data)
         if self.head:
             node.next = self.head
         
